@@ -34,3 +34,16 @@ function switchExample(value) {
 }
 
 console.log(switchExample(2));  // Output: Two
+
+// d. Loops
+// Using a for loop
+for (let i = 0; i < 5; i++) {
+  console.log(`For loop iteration ${i}`);
+}
+
+// Using a while loop
+let count = 0;
+while (count < 5) {
+  console.log(`While loop iteration ${count}`);
+  count++;
+}
