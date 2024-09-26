@@ -56,3 +56,14 @@ function isOddOrEven(number) {
 }
 
 console.log(isOddOrEven(5));  // Output: Odd
+
+// ii. Determine if a number is a prime number
+function isPrime(number) {
+  if (number <= 1) return false;
+  for (let i = 2; i <= Math.sqrt(number); i++) {
+    if (number % i === 0) return false;
+  }
+  return true;
+}
+
+console.log(isPrime(7));  // Output: true
