@@ -47,3 +47,12 @@ while (count < 5) {
   console.log(`While loop iteration ${count}`);
   count++;
 }
+
+// e. Functional Programming
+
+// i. Determine if a number is odd or even
+function isOddOrEven(number) {
+  return number % 2 === 0 ? "Even" : "Odd";
+}
+
+console.log(isOddOrEven(5));  // Output: Odd
