@@ -18,3 +18,19 @@ if (isGreater) {
 } else {
   console.log(`${intNum} is not greater than ${floatNum}`);
 }
+
+// ii. Switch-case statement
+function switchExample(value) {
+  switch (value) {
+    case 1:
+      return "One";
+    case 2:
+      return "Two";
+    case 3:
+      return "Three";
+    default:
+      return "Other";
+  }
+}
+
+console.log(switchExample(2));  // Output: Two
