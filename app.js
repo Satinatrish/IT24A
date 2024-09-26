@@ -67,3 +67,11 @@ function isPrime(number) {
 }
 
 console.log(isPrime(7));  // Output: true
+
+// iii. Determine if a string is a palindrome
+function isPalindrome(str) {
+  return str === str.split('').reverse().join('');
+}
+
+console.log(isPalindrome("racecar")); // Output: true
+console.log(isPalindrome("hello"));   // Output: false
