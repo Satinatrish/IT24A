@@ -30,8 +30,8 @@ initTileLayer() {
 const Mymap = new leafLetMap('map', [8.359735, 124.869206], 18);
 
 
-Mymap.addMarker(8.375000, 124.903532, "Satina's Residence");
-Mymap.addMarker(8.359639, 124.869179, 'CCS Laboratory 1');
-Mymap.addMarker(8.359554, 124.869153, 'CCS Laboratory 2');
+Mymap.addMarker(8.37519444, 124.90347222, "Satina Residence");
+Mymap.addMarker(8.37569444, 124.90338889, 'Elgie Store');
+Mymap.addMarker(8.359774, 124.869308, 'Sacred Kubo');
 
 Mymap.loadMarkersFromJson('map.json');
