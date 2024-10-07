@@ -4,46 +4,49 @@ class DataLogger{
         this.clearButton = document.getElementById(clearButtonId);
         this.idContainer = document.getElementById(cardContainerId);
         this.logCountElement = document.getElementById(logCountId);
-        this.loggedData = [];     
+        this.loggedData = [];
 
         this.logButton.addEventListener('click', () => this.logData());
         this.clearButton.addEventListener('click', () => this.clearLogs());
+
     }
     logData(){
         const time = new Date().toLocaleString();
         this.loggedData.push(time);
         this.updateCardContainer();
     }
-    clearLogs(){
-        this.loggedData = []; 
-        this.updateCardContainer();
-    }
-     CardContainer(){
-        this.idContainer.innerHTML = '';
     
+    clearLogs() {
+        this.loggedData = []; 
+        this.updateCardContainer(); 
+    }
+
+    updateCardContainer(){
+        this.idContainer.innerHTML = '';
+
         this.loggedData.forEach(data => {       
             const card = document.createElement('div');
             card.className = 'card mb-2';
             card.innerHTML = `
-             <div class="card-body">
+                <div class="card-body">
                     <h5 class="card-title">Logged Data</h5>
                     <p class="card-text">${data}</p>
                 </div>
             `;
             this.idContainer.appendChild(card);
         });
-           
+
         this.displayLogCount();
     }
-    countLogs(){
-      return this.loggedData.length;
+    countlogs(){
+        return this.loggedData.length;
     }
-    displayLogCount() {
-        const logCount = this.countLogs();
-        this.logCountElement.innerHTML = `<p>Total Logs: ${logCount}</p>`; 
+    displayLogCount(){
+        const logCount = this.countlogs();
+        this.logCountElement.innerHTML = `<p>Total Logs: ${logCount}</p>`;
     }
 }
 
-    document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     new DataLogger('logButton', 'idContainer', 'clearButton', 'logCount'); 
-    })
+    });
