@@ -1,16 +1,16 @@
 [{
-    "latitude": 8.375000,
-    "longitude" : 124.903532,
-    "message" : "Satina's Residence"
+    "latitude": 8.37519444,
+    "longitude" : 124.90347222,
+    "message" : "Satina  Residence"
 },
 {
-    "latitude": 8.359639,
-    "longitude" : 124.869179,
-    "message" : "CSS Laboratory 1"
+    "latitude": 8.37569444,
+    "longitude" : 124.90338889,
+    "message" : "Elgie Store"
 },
 {
-    "latitude": 8.359554,
-    "longitude" : 124.869153,
-    "message" : "CSS Laboratory 2"
+    "latitude": 8.359774,
+    "longitude" : 124.869308,
+    "message" : "Sacred Kubo"
 }
 ]
