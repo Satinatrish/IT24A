@@ -18,3 +18,10 @@ class DataLogger{
         this.loggedData = []; 
         this.updateCardContainer();
     }
+     CardContainer(){
+        this.idContainer.innerHTML = '';
+    
+        this.loggedData.forEach(data => {       
+            const card = document.createElement('div');
+            card.className = 'card mb-2';
+            card.innerHTML = `
