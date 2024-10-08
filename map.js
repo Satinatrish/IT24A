@@ -43,7 +43,8 @@ initTileLayer() {
         marker.on('click', () => {
             this.markerCounts[message]++;
             this.updateMarkerPopup(marker, message);
-        .bindPopup(message);
+        });
+        this.markers.push(marker);
     }
         loadMarkersFromJson(url) {
             fetch(url)
