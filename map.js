@@ -84,10 +84,14 @@ initTileLayer() {
    }
    dataSr() {
     this.addMarker(8.37519444, 124.90347222, 'Satina Residence');
-    this.attendanceCountSA++; 
+    this.attendanceCountSr++; 
     this.updateLogDisplay();
    }
-
+   dataEs() {
+    this.addMarker(8.37569444, 124.90338889, 'Elgie Store');
+    this.attendanceCountEs++;
+    this.updateLogDisplay();
+   }
 const Mymap = new leafLetMap('map', [8.359735, 124.869206], 18);
 
 
