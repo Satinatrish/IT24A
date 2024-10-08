@@ -38,6 +38,8 @@ initTileLayer() {
     }
     addMarker(lat, long, message){
         const marker = L.marker([lat, long]).addTo(this.map)
+        this.markerCounts[message] = (this.markerCounts[message] || 0) + 1;
+        this.updateMarkerPopup(marker, message);
         .bindPopup(message);
     }
         loadMarkersFromJson(url) {
