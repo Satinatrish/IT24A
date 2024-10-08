@@ -60,9 +60,8 @@ initTileLayer() {
             })
             .catch(error => console.error("Error Loading servers:", error));
         }
-     
-    }  
-    clearLogs(){
+      
+      clearLogs(){
         this.attendanceCountSA = 0;
         this.attendanceCountES = 0;
         this.attendanceCountSK = 0;
@@ -71,7 +70,11 @@ initTileLayer() {
         this.markerCounts = {}; 
         this.markers.forEach(marker => {
 
-        
+            const message = marker.getPopup().getContent().split('<br>')[0]; 
+            this.markerCounts[message] = 0;
+            this.updateMarkerPopup(marker, message); 
+        });
+    }
         
     
 
