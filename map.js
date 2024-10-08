@@ -103,17 +103,30 @@ dataSk() {
     this.loggedData.push('Sacred Kubo');  
     this.updateLogDisplay();
 }
-
-
 updateLogDisplay() {
-    this.idContainer.innerHTML = ''; 
+    
+    this.idContainer.innerHTML = '';
+
+    
+    const fragment = document.createDocumentFragment();
+
+    
     this.loggedData.forEach(data => {
         const logItem = document.createElement('div');
         logItem.className = 'log-item';
-        this.idContainer.appendChild(logItem);
+        logItem.textContent = data;  
+        fragment.appendChild(logItem);  
     });
+
+  
+    this.idContainer.appendChild(fragment);
+
+    
     this.displayLogCount();
-  }
+}
+
+
+
 }
 
 const Mymap = new leafLetMap('map', [8.359735, 124.869206], 18);
