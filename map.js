@@ -61,7 +61,17 @@ initTileLayer() {
             .catch(error => console.error("Error Loading servers:", error));
         }
      
+    }  
+    clearLogs(){
+        this.attendanceCountSC = 0;
+        this.attendanceCountBA = 0;
+        this.attendanceCountLab = 0;
+
+
+
     }
+        
+    
 
 const Mymap = new leafLetMap('map', [8.359735, 124.869206], 18);
 
