@@ -3,7 +3,7 @@ class leafLetMap{
         this.map = L.map(containerId).setView(center, zoom);
         this.initTileLayer();
 
-        this.attendanceCountSA= 0;
+        this.attendanceCountSR= 0;
         this.attendanceCountES= 0;
         this.attendanceCountSK= 0;
 
@@ -62,7 +62,7 @@ initTileLayer() {
         }
       
       clearLogs(){
-        this.attendanceCountSA = 0;
+        this.attendanceCountSR = 0;
         this.attendanceCountES = 0;
         this.attendanceCountSK = 0;
 
@@ -77,7 +77,11 @@ initTileLayer() {
         this.updateLogDisplay();
     }
         
-    
+    displayLogCount() {      
+        this.logCountElement.innerHTML = `Satina Residence: ${this.attendanceCountSR}`;
+        this.logCount1Element.innerHTML = `Elgie Store: ${this.attendanceCountES}`;
+        this.logCount2Element.innerHTML = `Sacred Kubo: ${this.attendanceCountLab}`;
+   }
 
 const Mymap = new leafLetMap('map', [8.359735, 124.869206], 18);
 
