@@ -21,9 +21,9 @@ class leafLetMap{
         this.logCount2Element = document.getElementById('logCountSK');
         this.idContainer = document.getElementById('logContainer');
 
-        this.btn.addEventListener('click', () => this.dataSc());
-        this.btn1.addEventListener('click', () => this.dataLab());
-        this.btn2.addEventListener('click', () => this.dataBa());
+        this.btn.addEventListener('click', () => this.dataSr());
+        this.btn1.addEventListener('click', () => this.dataEs());
+        this.btn2.addEventListener('click', () => this.dataSk());
         this.btnclear.addEventListener('click', () => this.clearLogs());
 
 
@@ -79,7 +79,7 @@ initTileLayer() {
     displayLogCount() {      
         this.logCountElement.innerHTML = `Satina Residence: ${this.attendanceCountSR}`;
         this.logCount1Element.innerHTML = `Elgie Store: ${this.attendanceCountES}`;
-        this.logCount2Element.innerHTML = `Sacred Kubo: ${this.attendanceCountLab}`;
+        this.logCount2Element.innerHTML = `Sacred Kubo: ${this.attendanceCountSK}`;
    }
    dataSr() {
     this.addMarker(8.37519444, 124.90347222, 'Satina Residence');
