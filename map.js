@@ -74,6 +74,7 @@ initTileLayer() {
             this.markerCounts[message] = 0;
             this.updateMarkerPopup(marker, message); 
         });
+        this.updateLogDisplay();
     }
         
     
