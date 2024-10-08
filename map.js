@@ -92,6 +92,11 @@ initTileLayer() {
     this.attendanceCountEs++;
     this.updateLogDisplay();
    }
+   dataSk() {
+    this.addMarker(8.359774, 124.869308, 'Sacred Kubo');
+    this.attendanceCountSk++;
+    this.updateLogDisplay();
+}
 const Mymap = new leafLetMap('map', [8.359735, 124.869206], 18);
 
 
