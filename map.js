@@ -22,6 +22,11 @@ class leafLetMap{
         this.logCount2Element = document.getElementById('logCountSK');
         this.idContainer = document.getElementById('logContainer');
 
+        this.btn.addEventListener('click', () => this.dataSc());
+        this.btn1.addEventListener('click', () => this.dataLab());
+        this.btn2.addEventListener('click', () => this.dataBa());
+        this.btnclear.addEventListener('click', () => this.clearLogs());
+
 
     }
 
