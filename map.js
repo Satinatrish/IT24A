@@ -2,6 +2,11 @@ class leafLetMap{
     constructor(containerId, center, zoom){
         this.map = L.map(containerId).setView(center, zoom);
         this.initTileLayer();
+
+        this.attendanceCountSA= 0;
+        this.attendanceCountES= 0;
+        this.attendanceCountSK= 0;
+
     }
 
 initTileLayer() {
