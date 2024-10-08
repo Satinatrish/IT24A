@@ -97,11 +97,18 @@ initTileLayer() {
     this.attendanceCountSk++;
     this.updateLogDisplay();
 }
+updateLogDisplay() {
+    this.idContainer.innerHTML = ''; 
+    this.loggedData.forEach(data => {
+        const logItem = document.createElement('div');
+        logItem.className = 'log-item';
+        this.idContainer.appendChild(logItem);
+    });
+    this.displayLogCount();
+  }
+}
 const Mymap = new leafLetMap('map', [8.359735, 124.869206], 18);
 
 
-Mymap.addMarker(8.37519444, 124.90347222, "Satina Residence");
-Mymap.addMarker(8.37569444, 124.90338889, 'Elgie Store');
-Mymap.addMarker(8.359774, 124.869308, 'Sacred Kubo');
 
 Mymap.loadMarkersFromJson('map.json');
