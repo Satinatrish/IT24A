@@ -115,13 +115,13 @@ updateLogDisplay() {
     this.displayLogCount();
   }
 }
-const Mymap = new leafLetMap('map', [8.359735, 124.869206], 18);
 
+const Mymap = new leafLetMap('map', [8.359735, 124.869206], 18);
 
 
 Mymap.loadMarkersFromJson('map.json');
 
 document.addEventListener('DOMContentLoaded', () => {
     Mymap.displayLogCount();
-    Mymap.loadMarkersFromJson('map.json');
 });
+
