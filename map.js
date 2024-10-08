@@ -20,6 +20,8 @@ class leafLetMap{
         this.logCountElement = document.getElementById('logCount');
         this.logCount1Element = document.getElementById('logCountSA');
         this.logCount2Element = document.getElementById('logCountSK');
+        this.idContainer = document.getElementById('logContainer');
+
 
     }
 
