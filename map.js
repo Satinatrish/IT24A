@@ -7,6 +7,10 @@ class leafLetMap{
         this.attendanceCountES= 0;
         this.attendanceCountSK= 0;
 
+        this.markerCounts = {};
+        this.markers = [];
+
+
     }
 
 initTileLayer() {
