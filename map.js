@@ -85,19 +85,26 @@ initTileLayer() {
    }
    dataSr() {
     this.addMarker(8.37519444, 124.90347222, 'Satina Residence');
-    this.attendanceCountSr++; 
-    this.updateLogDisplay();
-   }
-   dataEs() {
-    this.addMarker(8.37569444, 124.90338889, 'Elgie Store');
-    this.attendanceCountEs++;
-    this.updateLogDisplay();
-   }
-   dataSk() {
-    this.addMarker(8.359774, 124.869308, 'Sacred Kubo');
-    this.attendanceCountSk++;
+    this.attendanceCountSR++; 
+    this.loggedData.push('Satina Residence'); 
     this.updateLogDisplay();
 }
+
+dataEs() {
+    this.addMarker(8.37569444, 124.90338889, 'Elgie Store');
+    this.attendanceCountES++;
+    this.loggedData.push('Elgie Store');  
+    this.updateLogDisplay();
+}
+
+dataSk() {
+    this.addMarker(8.359774, 124.869308, 'Sacred Kubo');
+    this.attendanceCountSK++;
+    this.loggedData.push('Sacred Kubo');  
+    this.updateLogDisplay();
+}
+
+
 updateLogDisplay() {
     this.idContainer.innerHTML = ''; 
     this.loggedData.forEach(data => {
