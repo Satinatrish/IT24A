@@ -82,6 +82,11 @@ initTileLayer() {
         this.logCount1Element.innerHTML = `Elgie Store: ${this.attendanceCountES}`;
         this.logCount2Element.innerHTML = `Sacred Kubo: ${this.attendanceCountLab}`;
    }
+   dataSr() {
+    this.addMarker(8.37519444, 124.90347222, 'Satina Residence');
+    this.attendanceCountSA++; 
+    this.updateLogDisplay();
+   }
 
 const Mymap = new leafLetMap('map', [8.359735, 124.869206], 18);
 
