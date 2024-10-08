@@ -16,7 +16,6 @@ class leafLetMap{
         this.btn1 = document.getElementById('btn1');
         this.btn2 = document.getElementById('btn2');
         this.btnclear = document.getElementById('btnclear');
-        this.btnclear = document.getElementById('btnclear');
         this.logCountElement = document.getElementById('logCount');
         this.logCount1Element = document.getElementById('logCountSA');
         this.logCount2Element = document.getElementById('logCountSK');
@@ -115,5 +114,5 @@ Mymap.loadMarkersFromJson('map.json');
 
 document.addEventListener('DOMContentLoaded', () => {
     Mymap.displayLogCount();
-    Mymap.loadMarkersFromJson('applet-2.json');
+    Mymap.loadMarkersFromJson('map.json');
 });
