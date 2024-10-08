@@ -10,6 +10,9 @@ class leafLetMap{
         this.markerCounts = {};
         this.markers = [];
 
+        this.loggedData = []; 
+
+
 
     }
 
