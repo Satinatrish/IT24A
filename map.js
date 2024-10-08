@@ -63,13 +63,15 @@ initTileLayer() {
      
     }  
     clearLogs(){
-        this.attendanceCountSC = 0;
-        this.attendanceCountBA = 0;
-        this.attendanceCountLab = 0;
+        this.attendanceCountSA = 0;
+        this.attendanceCountES = 0;
+        this.attendanceCountSK = 0;
 
+        this.loggedData = [];
+        this.markerCounts = {}; 
+        this.markers.forEach(marker => {
 
-
-    }
+        
         
     
 
