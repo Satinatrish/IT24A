@@ -46,6 +46,10 @@ initTileLayer() {
         });
         this.markers.push(marker);
     }
+    updateMarkerPopup(marker, message) {
+        const count = this.markerCounts[message];
+        marker.bindPopup(`${message}<br>Attendance logs: ${count}`).openPopup();
+    }
         loadMarkersFromJson(url) {
             fetch(url)
             .then(response => response.json())
