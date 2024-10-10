@@ -1,20 +1,35 @@
 class StudentList {
-    constructor(dataFile) {
-        this.students = []; 
-        this.loadStudents(dataFile);
+    
+    constructor(dataUrl) {
+        this.dataUrl = dataUrl;
+        this.students = [];
+        this.init();
     }
 
-    loadStudents(dataFile) {
-        
+    async init() {
+        await this.fetchData();
+        this.renderStudentList(this.students); 
+        this.bindSearchEvent();
     }
 
-    renderStudentList(students, container) {
-        container.innerHTML = students.map(student => 
-            `<button class="btn btn-primary" style="margin-top:15px; width:25rem">
+    async fetchData() {
+        try {
+            const response = await fetch(this.dataUrl);
+            this.students = await response.json();
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    }
+
+    renderStudentList(students) {
+        const studentListContainer = document.getElementById('studentList');
+        studentListContainer.innerHTML = students.map(student => 
+            `<button class="btn btn-primary" style="margin-top:15px; 
+                                                    width:25rem">
                 ${student.student_name} | ${student.student_program}
             </button><br>`
         ).join('');
-    } 
+    }
 
     bindSearchEvent() {
         const studentSearchBar = document.getElementById('studentSearchBar');
@@ -33,10 +48,11 @@ class StudentList {
             return fullName.toLowerCase().includes(query.toLowerCase());
         });
 
-        searchListContainer.innerHTML = ''; // Clear previous results
+        searchListContainer.innerHTML = '';
+
         this.renderStudentList(filteredStudents, searchListContainer);
     }
+    
 }
-
 
 const studentList = new StudentList('applet 4.json');
