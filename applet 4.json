@@ -11,4 +11,10 @@
         "student_program": "BS-Psychology",
         "student_enrolled_date": "2023-02-20"
     },
+    {
+        "student_id": 3,
+        "student_name": "Michael Kai ",
+        "student_program": "BS-Criminology",
+        "student_enrolled_date": "2023-03-10"
+     }
 ]
