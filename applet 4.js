@@ -24,9 +24,11 @@ class StudentList {
             width:25rem">
              ${student.student_name} | ${student.student_program}
       </button><br>`
-   ).join('');
-}
-
+     ).join('');
+    }
+        bindSearchEvent() {
+    const studentSearchBar = document.getElementById('studentSearchBar');
+    const studentSearchListContainer = document.getElementById('studentSearchList');
       }
 
  }
