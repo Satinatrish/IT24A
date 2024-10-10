@@ -17,7 +17,16 @@ class StudentList {
         } catch (error) {
             console.error('Error fetching data:', error);
         }
-    } renderStudentList(students) {
+     renderStudentList(students) {
         const studentListContainer = document.getElementById('studentList');
         studentListContainer.innerHTML = students.map(student => 
+            `<button class="btn btn-primary" style="margin-top:15px; 
+            width:25rem">
+             ${student.student_name} | ${student.student_program}
+      </button><br>`
+   ).join('');
 }
+
+      }
+
+ }
