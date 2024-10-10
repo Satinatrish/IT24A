@@ -17,5 +17,7 @@ class StudentList {
         } catch (error) {
             console.error('Error fetching data:', error);
         }
-    }
+    } renderStudentList(students) {
+        const studentListContainer = document.getElementById('studentList');
+        studentListContainer.innerHTML = students.map(student => 
 }
