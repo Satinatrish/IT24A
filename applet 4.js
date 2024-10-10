@@ -17,16 +17,15 @@ class StudentList {
         } catch (error) {
             console.error('Error fetching data:', error);
         }
-     renderStudentList(students) {
-        const studentListContainer = document.getElementById('studentList');
-        studentListContainer.innerHTML = students.map(student => 
-            `<button class="btn btn-primary" style="margin-top:15px; 
-            width:25rem">
-             ${student.student_name} | ${student.student_program}
-      </button><br>`
-     ).join('');
-    }
-        bindSearchEvent() {
+        renderStudentList(students, container) { 
+            container.innerHTML = students.map(student => 
+                `<button class="btn btn-primary" style="margin-top:15px; width:25rem">
+                    ${student.student_name} | ${student.student_program}
+                </button><br>`
+            ).join('');
+        } 
+
+     bindSearchEvent() {
     const studentSearchBar = document.getElementById('studentSearchBar');
     const studentSearchListContainer = document.getElementById('studentSearchList');
 
@@ -43,10 +42,11 @@ class StudentList {
             return fullName.toLowerCase().includes(query.toLowerCase());
         });
 
+         }
+
         searchListContainer.innerHTML = '';
 
         this.renderStudentList(filteredStudents, searchListContainer);
       }
     }
- }
- const studentList = new StudentList('applet 4.json');
+       const studentList = new StudentList('applet 4.json'); 
