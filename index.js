@@ -12,3 +12,5 @@ init() {
         this.filterCards(this.searchInput.value);
     });
 }
+filterCards(query) {
+    const searchTerm = query.toLowerCase();
