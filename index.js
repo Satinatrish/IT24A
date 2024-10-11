@@ -8,7 +8,7 @@ class CardSearch {
     }
 
     init() {
-        // Ensure the search input exists before adding the event listener
+      
         if (this.searchInput) {
             this.searchInput.addEventListener('input', () => {
                 this.filterCards(this.searchInput.value);
@@ -25,17 +25,17 @@ class CardSearch {
             const title = card.querySelector('.card-title')?.textContent.toLowerCase() || '';
             const text = card.querySelector('.card-text')?.textContent.toLowerCase() || '';
 
-            // Show card if it matches the search term
+            
             if (title.includes(searchTerm) || text.includes(searchTerm)) {
-                card.closest('.col-bm-4').style.display = '';
+                card.closest('.col-12, .col-sm-6, .col-md-4').style.display = ''; 
             } else {
-                card.closest('.col-bm-4').style.display = 'none'; 
+                card.closest('.col-12, .col-sm-6, .col-md-4').style.display = 'none'; 
             }
         });
     }
 }
 
-// Ensure the document is fully loaded before initializing the CardSearch
+
 document.addEventListener('DOMContentLoaded', () => {
-    new CardSearch('cardSearch', 'container2');
+    new CardSearch('cardSearch', 'container.mt-4'); 
 });
