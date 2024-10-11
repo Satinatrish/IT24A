@@ -14,3 +14,8 @@ init() {
 }
 filterCards(query) {
     const searchTerm = query.toLowerCase();
+
+
+    this.cards.forEach(card => {
+        const title = card.querySelector('.card-title').textContent.toLowerCase();
+        const text = card.querySelector('.card-text').textContent.toLowerCase();
