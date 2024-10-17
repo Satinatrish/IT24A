@@ -14,5 +14,9 @@ class WeatherApp {
         this.humidity = document.getElementById('humidity');
         this.windSpeed = document.getElementById('windSpeed');
 
+
+        this.getWeatherBtn.addEventListener('click', () => this.fetchWeather());
+        this.getLocationBtn.addEventListener('click', () => this.fetchWeatherByLocation());
+
     }
 }
