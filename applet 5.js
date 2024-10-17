@@ -47,4 +47,5 @@ class WeatherService extends WeatherApp {
 }     
   async fetchWeatherByLocation() {
     if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
   }
