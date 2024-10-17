@@ -33,5 +33,15 @@ class WeatherApp {
 class WeatherService extends WeatherApp {
     async fetchWeather() {
         const city = this.cityInput.value;
+        if (city) {
+            const data = await this.getWeatherData(city);
+            if (data) {
+                this.displayWeather(data);
+            } else {
+                alert('City not found. Please try again.');
+            }
+        } else {
+            alert('Please enter a city name.');
     }
+  }
 }
