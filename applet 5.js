@@ -49,5 +49,7 @@ class WeatherService extends WeatherApp {
     if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
     async (position) => {
+    const { latitude, longitude } = position.coords;
+    const data = await this.getWeatherDataByCoordinates(latitude, longitude);
 
   }
