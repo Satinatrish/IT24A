@@ -1,9 +1,8 @@
-class WeatherApp {
-    constructor(apiKey) {
-        this.apiKey = apiKey;
-
+class WeatherApp{
+    constructor(){
         this.cityInput = document.getElementById('cityInput');
         this.getWeatherBtn = document.getElementById('getWeatherBtn');
+
         this.getLocationBtn = document.getElementById('getLocationBtn');
 
         this.weatherCard = document.getElementById('weatherCard');
@@ -12,12 +11,12 @@ class WeatherApp {
         this.description = document.getElementById('description');
         this.humidity = document.getElementById('humidity');
         this.windSpeed = document.getElementById('windSpeed');
+        this.APIKeyInput = document.getElementById('apiInput');
 
         this.getWeatherBtn.addEventListener('click', () => this.fetchWeather());
         this.getLocationBtn.addEventListener('click', () => this.fetchWeatherByLocation());
     }
-
-    displayWeather(data) {
+    displayWeather(data){
         this.cityName.textContent = `${data.name}, ${data.sys.country} (${data.coord.lat}, ${data.coord.lon})`;
         this.temperature.textContent = `Temperature: ${data.main.temp} °C`;
         this.description.textContent = `Weather: ${data.weather[0].description}`;
@@ -29,8 +28,21 @@ class WeatherApp {
 }
 
 class WeatherService extends WeatherApp {
+
+    constructor() {
+        super();
+        this.apiKey = '';
+    }
+
     async fetchWeather() {
         const city = this.cityInput.value;
+        this.apiKey = this.APIKeyInput.value.trim(); 
+
+        if (!this.apiKey) {
+            alert('Please enter your API key.');
+            return;
+        }
+
         if (city) {
             const data = await this.getWeatherData(city);
             if (data) {
@@ -43,7 +55,7 @@ class WeatherService extends WeatherApp {
         }
     }
 
-    async fetchWeatherByLocation() { // Moved this inside the class
+    async fetchWeatherByLocation() {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(
                 async (position) => {
@@ -88,7 +100,8 @@ class WeatherService extends WeatherApp {
         }
         return null;
     }
+
 }
 
-const apiKey = '8f14c74883999280b0b2a4de5779195b'; 
-const weatherApp = new WeatherService(apiKey);
+
+const weatherApp = new WeatherService();
