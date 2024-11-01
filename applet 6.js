@@ -69,3 +69,5 @@ class TodoList {
     
 }
 
+class TimestampedTodoList extends TodoList {
+}
